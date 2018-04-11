@@ -4,7 +4,7 @@
   "description": "Convert stylus to stylus abstract syntax tree.",
   "main": "index.js",
   "scripts": {
-    "test": "n"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,24 @@
   "bugs": {
     "url": "https://github.com/1969290646/stylus-to-ast/issues"
   },
-  "homepage": "https://github.com/1969290646/stylus-to-ast#readme"
+  "homepage": "https://github.com/1969290646/stylus-to-ast#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.10.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-eslint": "^4.0.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-resolve": "0.0.1-predev.1",
+    "rollup-plugin-uglify": "^3.0.0",
+    "uglify-es": "^3.3.9"
+  }
 }
