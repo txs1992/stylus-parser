@@ -1,0 +1,23 @@
+{
+  "name": "stylus-to-ast",
+  "version": "0.0.1",
+  "description": "Convert stylus to stylus abstract syntax tree.",
+  "main": "index.js",
+  "scripts": {
+    "test": "n"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1969290646/stylus-to-ast.git"
+  },
+  "keywords": [
+    "stylus-to-ast",
+    "stylus-ceonverter"
+  ],
+  "author": "MT <https://github.com/1969290646>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1969290646/stylus-to-ast/issues"
+  },
+  "homepage": "https://github.com/1969290646/stylus-to-ast#readme"
+}
