@@ -9,7 +9,7 @@ export default {
   output: {
     file: 'lib/index.js',
     name: 'FocusOutside',
-    format: 'umd'
+    format: 'cjs'
   },
   plugins: [
     eslint({
@@ -22,7 +22,7 @@ export default {
     babel({
       exclude: 'node_modules/**',
       plugins: ['external-helpers']
-    })
-    uglify({}, minify)
+    }),
+    // uglify({}, minify)
   ]
 }

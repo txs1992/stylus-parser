@@ -1,5 +1,5 @@
 {
-  "name": "stylus-to-ast",
+  "name": "stylus-parser",
   "version": "0.0.1",
   "description": "Convert stylus to stylus abstract syntax tree.",
   "main": "index.js",
@@ -8,18 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1969290646/stylus-to-ast.git"
+    "url": "git+https://github.com/txs1992/stylus-parser.git"
   },
   "keywords": [
-    "stylus-to-ast",
+    "stylus-parser",
     "stylus-ceonverter"
   ],
-  "author": "MT <https://github.com/1969290646>",
+  "author": "MT <https://github.com/txs1992>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/1969290646/stylus-to-ast/issues"
+    "url": "https://github.com/txs1992/stylus-parser/issues"
   },
-  "homepage": "https://github.com/1969290646/stylus-to-ast#readme",
+  "homepage": "https://github.com/txs1992/stylus-parser#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.2",
