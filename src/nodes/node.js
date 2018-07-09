@@ -109,7 +109,7 @@ export default class Node {
     }
   }
 
-  coerce (other) {
+  _coerce (other) {
     if (other.nodeName === this.nodeName) return other
     throw new CoercionError(`cannot coerce ${other} to ${this.nodeName}`)
   }

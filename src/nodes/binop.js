@@ -1,5 +1,6 @@
 import noop from 'lodash/noop'
 import { get as _get } from 'nosjs'
+import Node from '../node'
 
 export default class BinOp extends Node {
   constructor (op, left, right) {

@@ -1,5 +1,6 @@
-import { get as _get } from 'noshjs'
-import Node from './node'
+import noop from 'lodash/noop'
+import { get as _get } from 'nosjs'
+import Node from '../node'
 
 function hasOutput (block) {
   const nodes = _get(block, 'nodes', [])
@@ -23,7 +24,7 @@ function hasOutput (block) {
 }
 
 export default class Atrule extends Node {
-  constructor () {
+  constructor (type) {
     super()
     Node.call(this)
     this.type = type
@@ -53,7 +54,7 @@ export default class Atrule extends Node {
   clone (parent) {
     const { type, block, lineno, column, filename, segments } = this
     const atrule = new Atrule(type)
-    if (block) atrule.block = block.clone(parent, clone)
+    if (block) atrule.block =  _get(block, 'clone', noop)(parent, atrule)
     return Object.assign(atrule, {
       lineno,
       column,
