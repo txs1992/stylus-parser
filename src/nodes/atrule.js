@@ -17,7 +17,7 @@ function hasOutput (block) {
       case 'block':
         return hasOutput(node)
       default:
-        if (node.block) return hasOutput(node.block)
+        return node.block && hasOutput(node.block)
     }
   })
 }

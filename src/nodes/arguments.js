@@ -1,3 +1,4 @@
+import noop from 'lodash/noop'
 import { get as _get } from 'noshjs'
 import { Expression } from './index'
 
@@ -22,7 +23,7 @@ export default class Arguments extends Expression {
     const { map, lineno, column, isList, filename } = this
     const arguments = Expression.prototype.clone.call(this, parent)
     Object.keys(map).forEach(key => {
-      cloneMap[key] = _get(map, [key, 'clone'], it => it)(parent, arguments)
+      cloneMap[key] = _get(map, [key, 'clone'], noop)(parent, arguments)
     })
     return Object.assign(arguments, { lineno, column, isList, filename, map: cloneMap })
   }
