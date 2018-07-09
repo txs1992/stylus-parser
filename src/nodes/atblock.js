@@ -1,3 +1,4 @@
+import { get as _get } from 'noshjs'
 import Node from './node'
 
 export default class Atblock extends Node {
@@ -12,13 +13,13 @@ export default class Atblock extends Node {
 
   clone (parent) {
     const { block, lineno, column, filename } = this
-    return {
-      ...new Atblock(),
+    const atblock = new Atblock()
+    return Object.assign(atblock, {
       lineno,
       column,
       filename,
-      block: _get(block, 'clone', it => it)(parent, clone)
-    }
+      block: _get(block, 'clone', it => it)(parent, atblock)
+    })
   }
 
   toString () {

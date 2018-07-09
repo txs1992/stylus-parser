@@ -1,4 +1,3 @@
-
 import { get as _get } from 'noshjs'
 import { Expression } from './index'
 
@@ -21,11 +20,11 @@ export default class Arguments extends Expression {
   clone (parent) {
     const cloneMap = {}
     const { map, lineno, column, isList, filename } = this
-    const clone = Expression.prototype.clone.call(this, parent)
+    const arguments = Expression.prototype.clone.call(this, parent)
     Object.keys(map).forEach(key => {
-      cloneMap[key] = _get(map, [key, 'clone'], it => it)(parent, clone)
+      cloneMap[key] = _get(map, [key, 'clone'], it => it)(parent, arguments)
     })
-    return Object.assign(clone, { lineno, column, isList, filename, map: cloneMap })
+    return Object.assign(arguments, { lineno, column, isList, filename, map: cloneMap })
   }
 
   toJSON () {
