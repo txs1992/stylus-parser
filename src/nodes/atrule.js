@@ -68,7 +68,7 @@ export default class Atrule extends Node {
 
   toJSON () {
     const { type, block,lineno, column, filename, segments } = this
-    const json = { type, lineno, column, filename, segments }
+    const json = { type, lineno, column, filename, segments, __type: 'Atrule' }
     return block ? { ...json, block } : json
   }
 }

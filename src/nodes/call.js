@@ -30,7 +30,7 @@ export default class Call extends Node {
 
   toJSON () {
     const { name, args, block, lineno, column, filename } = this
-    const json = { name, args, lineno, column, filename }
+    const json = { name, args, lineno, column, filename, __type: 'Call' }
     return block ? { ...json, block } : json
   }
 }

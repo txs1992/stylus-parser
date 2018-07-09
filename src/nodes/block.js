@@ -36,6 +36,6 @@ export default class Block extends Node {
 
   toJSON () {
     const { scope, nodes, lineno, column, filename } = this
-    return { scope, nodes, lineno, column, filename }
+    return { scope, nodes, lineno, column, filename, __type: 'Block' }
   }
 }

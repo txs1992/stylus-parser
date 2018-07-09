@@ -29,7 +29,7 @@ export default class BinOp extends Node {
 
   toJSON () {
     const { op, val, left, right, lineno, column, filename } = this
-    const json = { op, left, right, lineno, column, filename }
+    const json = { op, left, right, lineno, column, filename, __type: 'BinOp' }
     return val ? { ...json, val } : json
   }
 }
