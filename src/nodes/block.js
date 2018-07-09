@@ -3,7 +3,6 @@ import Node from '../node'
 export default class Block extends Node {
   constructor (parent, node) {
     super()
-    Node.call(this)
     this.node = node
     this.nodes = []
     this.scope = true

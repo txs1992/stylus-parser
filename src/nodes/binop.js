@@ -3,7 +3,6 @@ import Node from '../node'
 export default class BinOp extends Node {
   constructor (op, left, right) {
     super()
-    Node.call(this)
     this.op = op
     this.left = left
     this.right = right

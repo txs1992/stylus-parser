@@ -25,7 +25,6 @@ function hasOutput (block) {
 export default class Atrule extends Node {
   constructor (type) {
     super()
-    Node.call(this)
     this.type = type
   }
 

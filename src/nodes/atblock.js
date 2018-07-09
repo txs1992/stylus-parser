@@ -3,7 +3,6 @@ import Node from './node'
 export default class Atblock extends Node {
   constructor () {
     super()
-    Node.call(this)
   }
 
   get nodes () {
