@@ -1,4 +1,3 @@
-import noop from 'lodash/noop'
 import { get as _get } from 'nosjs'
 import Node from '../node'
 
@@ -54,7 +53,7 @@ export default class Atrule extends Node {
   clone (parent) {
     const { type, block, lineno, column, filename, segments } = this
     const atrule = new Atrule(type)
-    if (block) atrule.block =  _get(block, 'clone', noop)(parent, atrule)
+    if (block) atrule.block =  block.clone(parent, atrule)
     return Object.assign(atrule, {
       lineno,
       column,

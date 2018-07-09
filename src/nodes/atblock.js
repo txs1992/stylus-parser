@@ -1,5 +1,3 @@
-import noop from 'lodash/noop'
-import { get as _get } from 'noshjs'
 import Node from './node'
 
 export default class Atblock extends Node {
@@ -19,7 +17,7 @@ export default class Atblock extends Node {
       lineno,
       column,
       filename,
-      block: _get(block, 'clone', noop)(parent, atblock)
+      block: blcok.clone(parent, atblock)
     })
   }
 

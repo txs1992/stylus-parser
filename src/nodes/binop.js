@@ -1,5 +1,3 @@
-import noop from 'lodash/noop'
-import { get as _get } from 'nosjs'
 import Node from '../node'
 
 export default class BinOp extends Node {
@@ -14,10 +12,10 @@ export default class BinOp extends Node {
   clone (parent) {
     const { op, val, left, right, lineno, column, filename } = this
     const binop = new BinOp(op)
-    if (val) binop.val = _get(val, 'clone', noop)(parent, binop)
+    if (val) binop.val = val.clone(parent, binop)
     return Object.assign(binop, {
-      left: _get(left, 'clone', noop)(parent, binop),
-      right: _get(right, 'clone', noop)(parent, binop),
+      left: left.clone(parent, binop),
+      right: right.clone(parent, binop),
       lineno,
       column,
       filename

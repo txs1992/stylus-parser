@@ -2,6 +2,7 @@ import Node from './node'
 
 export default class Boolean extends Node {
   constructor (val) {
+    super()
     if (this.nodeName) {
       this.val = val ? true : false
     } else {

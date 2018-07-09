@@ -26,12 +26,12 @@ export default class Block extends Node {
     const { node, nodes, scope, lineno, column, parent, filename } = this
     const block = new Block(parentProp || parent, nodeProp || node)
     nodes.forEach(node => { block.push(node.clone(block, block)) })
-    return {
+    return Object.assign(block, {
       scope,
       lineno,
       column,
       filename
-    }
+    })
   }
 
   toJSON () {
