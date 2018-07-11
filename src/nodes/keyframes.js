@@ -20,6 +20,10 @@ export default class Keyframes extends Atrule {
     })
   }
 
+  toString () {
+    return `@keyframes${this.segments.join('')}`
+  }
+
   toJSON () {
     const { block, lineno, column, prefix, segments, filename } = this
     return {
