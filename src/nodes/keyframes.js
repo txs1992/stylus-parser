@@ -21,7 +21,7 @@ export default class Keyframes extends Atrule {
   }
 
   toString () {
-    return `@keyframes${this.segments.join('')}`
+    return `@keyframes ${this.segments.join('')}`
   }
 
   toJSON () {
