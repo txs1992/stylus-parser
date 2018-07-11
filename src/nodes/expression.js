@@ -74,7 +74,7 @@ export default class Expression extends Node {
     this.nodes.push(node)
   }
 
-  clone () {
+  clone (parent) {
     const { nodes, lineno, column, isList, preserve, filename } = this
     const expression = new Expression(isList)
     return Object.assign(expression, {
