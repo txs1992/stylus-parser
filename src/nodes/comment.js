@@ -1,7 +1,7 @@
 import Node from './node'
 
 export default class Comment extends Node {
-  constructor (str, inline, suppress) {
+  constructor (str, suppress, inline) {
     super()
     this.str = str
     this.inline = inline

@@ -1,7 +1,7 @@
 import Node from './node'
 
 export default class Each extends Node {
-  constructor (key, val, expr, block) {
+  constructor (val, key, expr, block) {
     super()
     this.key = key
     this.val = val
