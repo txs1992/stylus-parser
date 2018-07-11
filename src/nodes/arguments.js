@@ -12,7 +12,6 @@ export function fromExpression (expr) {
 export default class Arguments extends Expression {
   constructor () {
     super()
-    Expression.call(this)
     this.map = {}
   }
 

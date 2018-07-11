@@ -11,7 +11,7 @@ export default class Each extends Node {
 
   clone (parent) {
     const { key, val, block, lineno, column, filename } = this
-    const each = new Each(key, val)
+    const each = new Each(val, key)
     return Object.assign(each, {
       expr: expr.clone(parent, each),
       block: block.clone(parent, each),
