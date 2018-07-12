@@ -21,7 +21,7 @@ export default class Object extends Nodes {
   }
 
   get (key) {
-    return this,this.vals[key]
+    return this.vals[key] || instaNull
   }
 
   has (key) {
