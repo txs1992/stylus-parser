@@ -1,5 +1,5 @@
 import Node from './node'
-import { falseInsta } from './index'
+import { instaFalse } from './index'
 
 export default class Null extends Node {
   constructor () {
@@ -19,7 +19,7 @@ export default class Null extends Node {
   }
 
   toBoolean () {
-    return falseInsta
+    return instaFalse
   }
   
   toJSON () {
